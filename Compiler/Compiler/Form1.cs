@@ -329,5 +329,50 @@ namespace Compiler
                 BackButton.PerformClick();
             }
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            CharChain chain = new CharChain(CodeField.Text);
+            Automat automat = new Automat();
+            bool result = false;
+
+            int correct = 0;
+            int wrong = 0;
+            
+            for (int i = 1; i <= 5; i++)
+            {
+                try
+                {
+                    result = automat.Check(chain);
+                }
+                catch (Exception ex)
+                {
+                    ResultField.Text += "\r\nПример №" + i.ToString() + " " + ex.Message;
+                    return;
+                }
+
+                if (result)
+                {
+                    correct++;
+                }
+                else
+                {
+                    wrong++;
+                }
+            }
+
+            char next = chain.GetNext();
+            if (next != '\0')
+            {
+                ResultField.Text += "\r\nВведено больше 5 примеров.";
+                return;
+            }
+
+            ResultField.Text += "\r\nВерно: " + correct.ToString() + ", неверно: " + wrong.ToString();
+            
+
+        }
+
+
     }
 }
