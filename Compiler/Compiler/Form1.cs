@@ -373,6 +373,14 @@ namespace Compiler
 
         }
 
+        private void множествоСостоянийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Info\\Automat.html");
+        }
 
+        private void функцииПереходовСостоянийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Info\\Graph.html");
+        }
     }
 }

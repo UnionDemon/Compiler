@@ -6,17 +6,18 @@
 	<style>
 	table{
     		border: 3px solid black;
+		border-collapse: collapse;
     		text-align: left;
     		margin: auto;
 	}
 
 	th{
-    		border: 3px solid white;
+    		border: 1px solid black;
     		text-align: center;
 	}
 
 	td{
-    		border: 3px solid white;
+    		border: 1px solid black;
     		text-align: center;
 	}
 	</style>
@@ -27,7 +28,7 @@
 		<li> <a href="#graph">Функции перехода состояний в виде графа</a></li>
 		<li> <a href="#table">Функции перехода состояний в виде таблицы</a></li>
 	</ol>
-	<h3 id="graph">Функции перехода состояний в виде графа</h2>
+	<h3 id="graph">Функции перехода состояний в виде графа</h3>
 	<br><img src="images\Graph.jpg" width="1021px" height="457px" style=" margin-left: 20%; margin-right:20%">
 	<figcaption style=" text-align: center">Рис.1 - Граф ДКА "Решение задач"</figcaption>
 	<h3 id="states">Функции перехода состояний в виде таблицы</h3>
@@ -60,6 +61,138 @@
                 		<td> - </td>
 				<td> - </td>
                 		<td> - </td>
+            		</tr>
+			<tr>
+                		<td> 1 </td>
+                		<td> {1} </td>
+                		<td> {1} </td>
+				<td> {4} </td>
+                		<td> {4} </td>
+				<td> - </td>
+                		<td> - </td>
+				<td> - </td>
+                		<td> - </td>
+            		</tr>
+			<tr>
+                		<td> 2 </td>
+                		<td> - </td>
+                		<td> {1} </td>
+				<td> - </td>
+                		<td> - </td>
+				<td> - </td>
+                		<td> - </td>
+				<td> - </td>
+                		<td> - </td>
+            		</tr>
+			<tr>
+                		<td> 3 </td>
+                		<td> - </td>
+                		<td> - </td>
+				<td> {4} </td>
+                		<td> {4} </td>
+				<td> - </td>
+                		<td> - </td>
+				<td> - </td>
+                		<td> - </td>
+            		</tr>
+			<tr>
+                		<td> 4 </td>
+                		<td> {7} </td>
+                		<td> {5} </td>
+				<td> {6} </td>
+                		<td> - </td>
+				<td> - </td>
+                		<td> - </td>
+				<td> - </td>
+                		<td> - </td>
+            		</tr>
+			<tr>
+                		<td> 5 </td>
+                		<td> {5} </td>
+                		<td> {5} </td>
+				<td> - </td>
+                		<td> - </td>
+				<td> {8} </td>
+                		<td> - </td>
+				<td> - </td>
+                		<td> - </td>
+            		</tr>
+			<tr>
+                		<td> 6 </td>
+                		<td> - </td>
+                		<td> {5} </td>
+				<td> - </td>
+                		<td> - </td>
+				<td> - </td>
+                		<td> - </td>
+				<td> - </td>
+                		<td> - </td>
+            		</tr>
+			<tr>
+                		<td> 7 </td>
+                		<td> - </td>
+                		<td> - </td>
+				<td> - </td>
+                		<td> - </td>
+				<td> {8} </td>
+                		<td> - </td>
+				<td> - </td>
+                		<td> - </td>
+            		</tr>
+			<tr>
+                		<td> 8 </td>
+                		<td> {11} </td>
+                		<td> {9} </td>
+				<td> {10} </td>
+                		<td> - </td>
+				<td> - </td>
+                		<td> {12} </td>
+				<td> - </td>
+                		<td> - </td>
+            		</tr>
+			<tr>
+                		<td> 9 </td>
+                		<td> {9} </td>
+                		<td> {9} </td>
+				<td> - </td>
+                		<td> - </td>
+				<td> - </td>
+                		<td> - </td>
+				<td> {13} </td>
+                		<td> {13} </td>
+            		</tr>
+			<tr>
+                		<td> 10 </td>
+                		<td> - </td>
+                		<td> {9} </td>
+				<td> - </td>
+                		<td> - </td>
+				<td> - </td>
+                		<td> - </td>
+				<td> - </td>
+                		<td> - </td>
+            		</tr>
+			<tr>
+                		<td> 11 </td>
+                		<td> - </td>
+                		<td> - </td>
+				<td> - </td>
+                		<td> - </td>
+				<td> - </td>
+                		<td> - </td>
+				<td> {13} </td>
+                		<td> {13} </td>
+            		</tr>
+			<tr>
+                		<td> 12 </td>
+                		<td> - </td>
+                		<td> - </td>
+				<td> - </td>
+                		<td> - </td>
+				<td> - </td>
+                		<td> - </td>
+				<td> {13} </td>
+                		<td> {13} </td>
             		</tr>
         	</tbody>
     	</table>

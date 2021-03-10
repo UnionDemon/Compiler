@@ -64,5 +64,11 @@ Output window
 Font size up
 Уменьшить шрифт
 Font size down
+Задание
+Task
+Множество состояний и входной алфавит
+State set and input alphabet
+Функции переходов состояний
+State transition functions
 Новый документ
 New document

@@ -77,13 +77,16 @@
             this.CopyButton = new System.Windows.Forms.ToolStripButton();
             this.CutButton = new System.Windows.Forms.ToolStripButton();
             this.PasteButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.RowsNumbers = new System.Windows.Forms.RichTextBox();
             this.CodeField = new System.Windows.Forms.RichTextBox();
             this.ResultField = new System.Windows.Forms.RichTextBox();
             this.PagesTab = new System.Windows.Forms.TabControl();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.заданиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.множествоСостоянийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.функцииПереходовСостоянийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -105,7 +108,8 @@
             this.TextStrip,
             this.PlayStrip,
             this.InfoStrip,
-            this.ViewStrip});
+            this.ViewStrip,
+            this.заданиеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1075, 28);
@@ -497,13 +501,24 @@
             this.PasteButton.Text = "Вставить";
             this.PasteButton.Click += new System.EventHandler(this.PasteClick);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.AutoSize = false;
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(36, 36);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // splitContainer1
             // 
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.Location = new System.Drawing.Point(16, 126);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -527,7 +542,7 @@
             this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer2.IsSplitterFixed = true;
             this.splitContainer2.Location = new System.Drawing.Point(4, 4);
-            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
@@ -566,7 +581,7 @@
             this.CodeField.Margin = new System.Windows.Forms.Padding(0);
             this.CodeField.Name = "CodeField";
             this.CodeField.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.CodeField.Size = new System.Drawing.Size(978, 356);
+            this.CodeField.Size = new System.Drawing.Size(977, 356);
             this.CodeField.TabIndex = 3;
             this.CodeField.Text = "";
             this.CodeField.VScroll += new System.EventHandler(this.RTBScroll);
@@ -580,11 +595,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ResultField.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ResultField.Location = new System.Drawing.Point(4, 4);
-            this.ResultField.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ResultField.Margin = new System.Windows.Forms.Padding(4);
             this.ResultField.Name = "ResultField";
             this.ResultField.ReadOnly = true;
             this.ResultField.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.ResultField.Size = new System.Drawing.Size(1033, 355);
+            this.ResultField.Size = new System.Drawing.Size(1033, 354);
             this.ResultField.TabIndex = 3;
             this.ResultField.Text = "";
             // 
@@ -594,7 +609,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PagesTab.Location = new System.Drawing.Point(16, 81);
-            this.PagesTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PagesTab.Margin = new System.Windows.Forms.Padding(4);
             this.PagesTab.MaximumSize = new System.Drawing.Size(13333, 36);
             this.PagesTab.MinimumSize = new System.Drawing.Size(0, 36);
             this.PagesTab.Name = "PagesTab";
@@ -605,16 +620,28 @@
             this.PagesTab.DragDrop += new System.Windows.Forms.DragEventHandler(this.Drop);
             this.PagesTab.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PagesTabPressDown);
             // 
-            // toolStripButton1
+            // заданиеToolStripMenuItem
             // 
-            this.toolStripButton1.AutoSize = false;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(36, 36);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.заданиеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.множествоСостоянийToolStripMenuItem,
+            this.функцииПереходовСостоянийToolStripMenuItem});
+            this.заданиеToolStripMenuItem.Name = "заданиеToolStripMenuItem";
+            this.заданиеToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.заданиеToolStripMenuItem.Text = "Задание";
+            // 
+            // множествоСостоянийToolStripMenuItem
+            // 
+            this.множествоСостоянийToolStripMenuItem.Name = "множествоСостоянийToolStripMenuItem";
+            this.множествоСостоянийToolStripMenuItem.Size = new System.Drawing.Size(386, 26);
+            this.множествоСостоянийToolStripMenuItem.Text = "Множество состояний и входной алфавит";
+            this.множествоСостоянийToolStripMenuItem.Click += new System.EventHandler(this.множествоСостоянийToolStripMenuItem_Click);
+            // 
+            // функцииПереходовСостоянийToolStripMenuItem
+            // 
+            this.функцииПереходовСостоянийToolStripMenuItem.Name = "функцииПереходовСостоянийToolStripMenuItem";
+            this.функцииПереходовСостоянийToolStripMenuItem.Size = new System.Drawing.Size(386, 26);
+            this.функцииПереходовСостоянийToolStripMenuItem.Text = "Функции переходов состояний";
+            this.функцииПереходовСостоянийToolStripMenuItem.Click += new System.EventHandler(this.функцииПереходовСостоянийToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -628,7 +655,7 @@
             this.Controls.Add(this.menuStrip1);
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(527, 481);
             this.Name = "Form1";
             this.Text = "Compiler";
@@ -709,6 +736,9 @@
         private System.Windows.Forms.RichTextBox RowsNumbers;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripMenuItem заданиеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem множествоСостоянийToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem функцииПереходовСостоянийToolStripMenuItem;
     }
 }
 

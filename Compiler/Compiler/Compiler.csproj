@@ -112,7 +112,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="correct.jpg" />
     <Content Include="Info\correct.jpg" />
     <Content Include="Info\index.html" />
     <Content Include="Localisations\LocalisationEN.txt" />
