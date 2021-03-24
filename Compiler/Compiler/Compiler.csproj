@@ -114,12 +114,13 @@
   <ItemGroup>
     <Content Include="Info\correct.jpg" />
     <Content Include="Info\index.html" />
-    <Content Include="Localisations\LocalisationEN.txt" />
-    <Content Include="Localisations\LocalisationRU.txt" />
     <Content Include="Info\menu.jpg" />
     <Content Include="Info\newtexts.jpg" />
     <Content Include="Info\toolbar.jpg" />
     <Content Include="Info\view.jpg" />
+    <Content Include="Localisations\LocalisationEN.txt" />
+    <Content Include="Localisations\LocalisationRU.txt" />
+    <Content Include="Localisations\Localisations.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

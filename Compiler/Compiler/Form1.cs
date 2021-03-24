@@ -13,7 +13,7 @@ namespace Compiler
     public partial class Form1 : Form
     {
         List<DocPage> Pages;
-        Localisation localisation;
+        LocalisationController localisation;
         CodeHandler codeHandler;
         private string CopyBuffer;
 
@@ -228,8 +228,8 @@ namespace Compiler
             CodeField.AllowDrop = true;
             CodeField.DragDrop += Drop;
 
-            localisation = new Localisation();
-            localisation.LoadFromFile("LocalisationEN.txt");
+            localisation = new LocalisationController("Localisations/Localisations.txt");
+            SetLocalisations();
             Locale();
 
             Pages = new List<DocPage>();
@@ -244,6 +244,23 @@ namespace Compiler
             codeHandler = new CodeHandler(CodeField);
 
             UpdateInterface();
+        }
+        private void SetLocalisations()
+        {
+            List<string> loclist = localisation.Localisations;
+            foreach (string str in loclist)
+            {
+                ToolStripMenuItem tmp = new ToolStripMenuItem();
+                tmp.Name = str + "LangStrip";
+                tmp.Click += SetLocalisation;
+                tmp.Text = str;
+                LocalisationStrip.DropDownItems.Add(tmp);
+            }
+        }
+        private void SetLocalisation(object sender, EventArgs e)
+        {
+            localisation.CurrentLocalisation = (sender as ToolStripMenuItem).Text;
+            Locale();
         }
 
         private void Locale()
@@ -283,6 +300,10 @@ namespace Compiler
             CodeFontDownStrip.Text = localisation["Уменьшить шрифт"];
             ResultFontUpStrip.Text = localisation["Увеличить шрифт"];
             ResultFontDownStrip.Text = localisation["Уменьшить шрифт"];
+            TaskStrip.Text = localisation["Задание"];
+            StatesAndAlphabetStrip.Text = localisation["Множество состояний и входной алфавит"];
+            FunctionsTransStatesStrip.Text = localisation["Функции переходов состояний"];
+            LocalisationStrip.Text = localisation["Локализация"];
 
             DocPage.DefaultTitle = localisation["Новый документ"];
         }
