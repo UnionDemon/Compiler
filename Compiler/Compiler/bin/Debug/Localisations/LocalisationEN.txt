@@ -8,6 +8,8 @@ Text
 Play
 Справка
 Info
+Локализация
+Localisation
 Вид
 View
 Создать
@@ -72,5 +74,3 @@ State set and input alphabet
 State transition functions
 Новый документ
 New document
-Локализация
-Localisation

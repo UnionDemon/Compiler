@@ -1,2 +1,2 @@
 ﻿Localisations/LocalisationRU.txt = Русская
-Localisations/LocalisationEN.txt = Английская
+Localisations/LocalisationEN.txt = English
